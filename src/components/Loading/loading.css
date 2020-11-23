@@ -5,6 +5,7 @@
   height: 80px;
   left: calc(50% - 40px);
   top: calc(50% - 40px);
+  z-index: 9999;
 }
 .lds-facebook div {
   display: inline-block;
