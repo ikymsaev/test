@@ -8,11 +8,11 @@ type propType = {
     email?: string,
     message?: string,
     phone?: string,
-    timestamp?: string
+    date?: string
 }
 
 
-const User = ({firstName, lastName, email, message, phone, timestamp}:propType) => {
+const User = ({firstName, lastName, email, message, phone, date}:propType) => {
 
     const [isVisible, setVisible] = React.useState(false)
     const showContacts = () => setVisible(true)
@@ -23,7 +23,7 @@ const User = ({firstName, lastName, email, message, phone, timestamp}:propType) 
 
         <h3>{firstName}, {lastName}</h3>
         <p>{message}</p>
-        <span>{timestamp}</span>
+        <span>{date}</span>
 
         {isVisible &&
             <div className={styles.contacts}>
