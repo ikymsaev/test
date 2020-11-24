@@ -7,7 +7,3 @@ export const setLoading = () => ({
 export const removeLoading = () => ({
     type: types.REMOVE_LOADING
 })
-export const showError = (err: any) => ({
-    type: types.SHOW_ERROR,
-    payload: err
-})

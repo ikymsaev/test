@@ -1,6 +1,6 @@
 import Api from '../../api/api'
 import types from './types'
-import {setLoading, removeLoading, showError} from '../app/actions'
+import {setLoading, removeLoading } from '../app/actions'
 
 const setUsers = (users: any) => ({
     type: types.SET_USERS,
@@ -16,12 +16,8 @@ export const getUsers = (count: number) => {
         dispatch(setLoading())
         Api.getUsers(count)
             .then( res => {
-                if(res.data){
-                    dispatch(setUsers(res))
-                    dispatch(removeLoading())
-                } else {
-                    dispatch(showError('Ошибка сервера'))
-                }
+                dispatch(setUsers(res))
+                dispatch(removeLoading())
             })
     }
 }

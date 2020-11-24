@@ -1,8 +1,7 @@
 import types from './types'
 
 let initialState = {
-    isLoading: false,
-    error: null
+    isLoading: false
 }
 
 export const appReducer = (state = initialState, action: any) => {
@@ -18,12 +17,6 @@ export const appReducer = (state = initialState, action: any) => {
             return {
                 ...state,
                 isLoading: false
-            }
-        }
-        case types.REMOVE_LOADING: {  
-            return {
-                ...state,
-                error: false
             }
         }
         default:
